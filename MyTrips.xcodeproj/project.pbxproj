@@ -14,6 +14,7 @@
 		8DEA28B91C3D9BE8006C89C7 /* MyTripsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28B81C3D9BE8006C89C7 /* MyTripsTests.swift */; };
 		8DEA28C41C3D9BE8006C89C7 /* MyTripsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28C31C3D9BE8006C89C7 /* MyTripsUITests.swift */; };
 		8DEA28D61C3D9D24006C89C7 /* MyTripsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28D51C3D9D24006C89C7 /* MyTripsCollectionViewController.swift */; };
+		8DEA28D81C3DA04F006C89C7 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28D71C3DA04F006C89C7 /* TripCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8DEA28C31C3D9BE8006C89C7 /* MyTripsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsUITests.swift; sourceTree = "<group>"; };
 		8DEA28C51C3D9BE8006C89C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEA28D51C3D9D24006C89C7 /* MyTripsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTripsCollectionViewController.swift; sourceTree = "<group>"; };
+		8DEA28D71C3DA04F006C89C7 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		8DEA28D31C3D9C65006C89C7 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				8DEA28D71C3DA04F006C89C7 /* TripCollectionViewCell.swift */,
 			);
 			name = ViewCells;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				8DEA28A41C3D9BE8006C89C7 /* AppDelegate.swift in Sources */,
 				8DEA28D61C3D9D24006C89C7 /* MyTripsCollectionViewController.swift in Sources */,
+				8DEA28D81C3DA04F006C89C7 /* TripCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

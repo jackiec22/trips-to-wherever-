@@ -12,7 +12,7 @@ import UIKit
 
 class MyTripsCollectionViewController: UICollectionViewController {
     
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 50.0, bottom: 50.0, right: 50.0)
     private let reuseIdentifier = "TripViewCell"
 
     override func viewDidLoad() {
@@ -20,9 +20,6 @@ class MyTripsCollectionViewController: UICollectionViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -56,10 +53,13 @@ class MyTripsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TripCollectionViewCell
     
         // Configure the cell
-        cell.backgroundColor = UIColor.blackColor()
+        cell.backgroundColor = UIColor.greenColor()
+        cell.label.text = "Hello"
+        
     
         return cell
     }
@@ -103,7 +103,7 @@ extension MyTripsCollectionViewController : UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 140, height: 100)
     }
     
     
