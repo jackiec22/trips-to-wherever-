@@ -57,8 +57,8 @@ class MyTripsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! TripCollectionViewCell
     
         // Configure the cell
-        cell.backgroundColor = UIColor.greenColor()
-        cell.label.text = "Hello"
+        cell.backgroundColor = UIColor.grayColor()
+        cell.locationName = "Hello"
         
     
         return cell
@@ -103,7 +103,7 @@ extension MyTripsCollectionViewController : UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
             
-        return CGSize(width: 140, height: 100)
+        return CGSize(width: 140, height: 140)
     }
     
     

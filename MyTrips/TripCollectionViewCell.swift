@@ -10,6 +10,13 @@ import UIKit
 
 class TripCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
+    
+    var locationName = " " {
+        didSet {
+            label.text = locationName
+        }
+    }
     
 }

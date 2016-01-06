@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Trips Collection View Controller-->
@@ -14,21 +16,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m6B-IZ-a2L">
-                            <size key="itemSize" width="163" height="153"/>
+                            <size key="itemSize" width="276" height="220"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TripViewCell" id="gDk-gU-L54" customClass="TripCollectionViewCell" customModule="MyTrips" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="163" height="153"/>
+                                <rect key="frame" x="150" y="64" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="163" height="153"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyL-Yf-aqZ">
-                                            <rect key="frame" x="60" y="66" width="42" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDH-Wm-DkN">
+                                            <rect key="frame" x="8" y="8" width="284" height="255"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hDH-Wm-DkN" secondAttribute="height" multiplier="284:255" id="9EB-QR-eu4"/>
+                                                <constraint firstAttribute="width" secondItem="hDH-Wm-DkN" secondAttribute="height" multiplier="284:255" id="bIP-oU-S2G"/>
+                                                <constraint firstAttribute="width" secondItem="hDH-Wm-DkN" secondAttribute="height" multiplier="71:48" id="gCJ-kq-BjP"/>
+                                                <constraint firstAttribute="width" secondItem="hDH-Wm-DkN" secondAttribute="height" multiplier="284:255" id="hK0-kO-JKG"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="9EB-QR-eu4"/>
+                                                    <exclude reference="bIP-oU-S2G"/>
+                                                    <exclude reference="gCJ-kq-BjP"/>
+                                                    <exclude reference="hK0-kO-JKG"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlQ-KY-q7u">
+                                            <rect key="frame" x="129" y="271" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -38,11 +57,23 @@
                                 </view>
                                 <color key="backgroundColor" red="0.27843137254901962" green="0.2196078431372549" blue="0.47843137254901963" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="SyL-Yf-aqZ" firstAttribute="centerY" secondItem="gDk-gU-L54" secondAttribute="centerY" id="cYT-oz-ywI"/>
-                                    <constraint firstItem="SyL-Yf-aqZ" firstAttribute="centerX" secondItem="gDk-gU-L54" secondAttribute="centerX" id="tJx-nH-rcS"/>
+                                    <constraint firstAttribute="topMargin" secondItem="hDH-Wm-DkN" secondAttribute="top" id="1an-5L-Jnu"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="hDH-Wm-DkN" secondAttribute="leading" id="3wL-6f-Pgc"/>
+                                    <constraint firstItem="FlQ-KY-q7u" firstAttribute="top" secondItem="hDH-Wm-DkN" secondAttribute="bottom" constant="8" id="BeY-EW-8je"/>
+                                    <constraint firstItem="FlQ-KY-q7u" firstAttribute="top" secondItem="hDH-Wm-DkN" secondAttribute="bottom" constant="8" id="JLm-Pw-NZ2"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="hDH-Wm-DkN" secondAttribute="trailing" id="NLU-fE-B2s"/>
+                                    <constraint firstItem="FlQ-KY-q7u" firstAttribute="centerX" secondItem="gDk-gU-L54" secondAttribute="centerX" id="dRD-jR-mpe"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="FlQ-KY-q7u" secondAttribute="bottom" id="k7V-ns-JNR"/>
                                 </constraints>
+                                <size key="customSize" width="300" height="300"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JLm-Pw-NZ2"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <outlet property="label" destination="SyL-Yf-aqZ" id="StB-IR-18y"/>
+                                    <outlet property="image" destination="hDH-Wm-DkN" id="ScX-7Q-b5V"/>
+                                    <outlet property="label" destination="FlQ-KY-q7u" id="BG8-oW-qPk"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
