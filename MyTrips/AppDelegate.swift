@@ -9,9 +9,10 @@
 import UIKit
 
 let purpleThemeColor = UIColor(red: 91.0/255.0, green: 77.0/255.0, blue: 137.0/255.0, alpha: 1.0)
-let greenThemeColor = UIColor(red: 51.0/255.0, green: 228.0/255.0, blue: 197.0/255.0, alpha: 1.0)
+let greenThemeColor = UIColor(red: 51.0/255.0, green: 228.0/255.0, blue: 197.0/255.0, alpha: 1.0) //Hex code: #33E4C5
 let yellowThemeColor = UIColor(red: 249.0/255.0, green: 232.0/255.0, blue: 81.0/255.0, alpha: 1.0)
 let pinkThemeColor = UIColor(red: 254.0/255.0, green: 29.0/255.0, blue: 197.0/255.0, alpha: 1.0)
+let titleThemeColor = UIColor.whiteColor()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navAppear.barStyle = UIBarStyle.Black
         navAppear.barTintColor = purpleThemeColor
         navAppear.tintColor = UIColor.greenColor()
-        navAppear.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()  ] // color for the title
+        navAppear.titleTextAttributes = [NSForegroundColorAttributeName: titleThemeColor  ] // color for the title
         
         // Override point for customization after application launch.
         return true

@@ -19,4 +19,11 @@ class TripCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var cellImage: UIImage? = nil {
+        didSet {
+            image.image = cellImage
+            image.contentMode = .ScaleAspectFit
+        }
+    }
+    
 }

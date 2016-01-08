@@ -12,24 +12,24 @@
             <objects>
                 <collectionViewController id="mYB-T6-lXo" customClass="MyTripsCollectionViewController" customModule="MyTrips" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0nN-QR-zeI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m6B-IZ-a2L">
                             <size key="itemSize" width="276" height="220"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TripViewCell" id="gDk-gU-L54" customClass="TripCollectionViewCell" customModule="MyTrips" customModuleProvider="target">
-                                <rect key="frame" x="150" y="64" width="300" height="300"/>
+                                <rect key="frame" x="150" y="50" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDH-Wm-DkN">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDH-Wm-DkN">
                                             <rect key="frame" x="8" y="8" width="284" height="255"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="hDH-Wm-DkN" secondAttribute="height" multiplier="284:255" id="9EB-QR-eu4"/>
@@ -74,19 +74,59 @@
                                 <connections>
                                     <outlet property="image" destination="hDH-Wm-DkN" id="ScX-7Q-b5V"/>
                                     <outlet property="label" destination="FlQ-KY-q7u" id="BG8-oW-qPk"/>
+                                    <segue destination="Via-t3-Kdm" kind="show" identifier="TripSelected" id="ABc-3m-f5N"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YearHeaderView" id="RBN-9B-4oe" customClass="YearHeaderView" customModule="MyTrips" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDa-UM-9Ts">
+                                    <rect key="frame" x="268" y="8" width="64" height="33"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="fDa-UM-9Ts" firstAttribute="centerX" secondItem="RBN-9B-4oe" secondAttribute="centerX" id="Ah9-jI-aE7"/>
+                                <constraint firstItem="fDa-UM-9Ts" firstAttribute="centerY" secondItem="RBN-9B-4oe" secondAttribute="centerY" id="IX2-Kr-SOg"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="fDa-UM-9Ts" id="A9a-Jw-1Sa"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="mYB-T6-lXo" id="Ijz-cz-jjn"/>
                             <outlet property="delegate" destination="mYB-T6-lXo" id="WsO-UD-Em0"/>
                         </connections>
                     </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="X9r-m9-YfG"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L31-UT-ErE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1314" y="404"/>
+        </scene>
+        <!--Trip Detail View Controller-->
+        <scene sceneID="bEm-0y-yZk">
+            <objects>
+                <viewController id="Via-t3-Kdm" customClass="TripDetailViewController" customModule="MyTrips" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VPM-J8-BoG"/>
+                        <viewControllerLayoutGuide type="bottom" id="jHa-av-7hk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="44O-lC-5BI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqv-Ow-jYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="404"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xlP-xs-HVi">

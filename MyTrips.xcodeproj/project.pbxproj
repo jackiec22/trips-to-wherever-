@@ -15,6 +15,11 @@
 		8DEA28C41C3D9BE8006C89C7 /* MyTripsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28C31C3D9BE8006C89C7 /* MyTripsUITests.swift */; };
 		8DEA28D61C3D9D24006C89C7 /* MyTripsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28D51C3D9D24006C89C7 /* MyTripsCollectionViewController.swift */; };
 		8DEA28D81C3DA04F006C89C7 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28D71C3DA04F006C89C7 /* TripCollectionViewCell.swift */; };
+		8DEA28DA1C3DC9FA006C89C7 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28D91C3DC9FA006C89C7 /* Trip.swift */; };
+		8DEA28DC1C3DD637006C89C7 /* MyTripsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28DB1C3DD637006C89C7 /* MyTripsBrain.swift */; };
+		8DEA28DE1C3E1246006C89C7 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28DD1C3E1246006C89C7 /* Year.swift */; };
+		8DEA28E01C3E24D0006C89C7 /* YearHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28DF1C3E24D0006C89C7 /* YearHeaderView.swift */; };
+		8DEA28E21C3ED1C7006C89C7 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28E11C3ED1C7006C89C7 /* TripDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		8DEA28C51C3D9BE8006C89C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEA28D51C3D9D24006C89C7 /* MyTripsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTripsCollectionViewController.swift; sourceTree = "<group>"; };
 		8DEA28D71C3DA04F006C89C7 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DEA28D91C3DC9FA006C89C7 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		8DEA28DB1C3DD637006C89C7 /* MyTripsBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTripsBrain.swift; sourceTree = "<group>"; };
+		8DEA28DD1C3E1246006C89C7 /* Year.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
+		8DEA28DF1C3E24D0006C89C7 /* YearHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearHeaderView.swift; sourceTree = "<group>"; };
+		8DEA28E11C3ED1C7006C89C7 /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,9 @@
 		8DEA28D11C3D9C48006C89C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8DEA28DD1C3E1246006C89C7 /* Year.swift */,
+				8DEA28D91C3DC9FA006C89C7 /* Trip.swift */,
+				8DEA28DB1C3DD637006C89C7 /* MyTripsBrain.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -136,6 +149,7 @@
 		8DEA28D21C3D9C52006C89C7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8DEA28E11C3ED1C7006C89C7 /* TripDetailViewController.swift */,
 				8DEA28D51C3D9D24006C89C7 /* MyTripsCollectionViewController.swift */,
 			);
 			name = ViewControllers;
@@ -144,6 +158,7 @@
 		8DEA28D31C3D9C65006C89C7 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				8DEA28DF1C3E24D0006C89C7 /* YearHeaderView.swift */,
 				8DEA28D71C3DA04F006C89C7 /* TripCollectionViewCell.swift */,
 			);
 			name = ViewCells;
@@ -291,8 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEA28DA1C3DC9FA006C89C7 /* Trip.swift in Sources */,
 				8DEA28A41C3D9BE8006C89C7 /* AppDelegate.swift in Sources */,
+				8DEA28E21C3ED1C7006C89C7 /* TripDetailViewController.swift in Sources */,
 				8DEA28D61C3D9D24006C89C7 /* MyTripsCollectionViewController.swift in Sources */,
+				8DEA28DC1C3DD637006C89C7 /* MyTripsBrain.swift in Sources */,
+				8DEA28DE1C3E1246006C89C7 /* Year.swift in Sources */,
+				8DEA28E01C3E24D0006C89C7 /* YearHeaderView.swift in Sources */,
 				8DEA28D81C3DA04F006C89C7 /* TripCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
