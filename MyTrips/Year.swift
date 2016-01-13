@@ -11,10 +11,26 @@ import Foundation
 class Year {
     
     var thisDate: NSDate? = nil
-    var trips: [Trip]? = nil
+    var trips: [Trip] = []
     
     init(date: NSDate)
     {
         self.thisDate = date
+    }
+    
+    
+    // given an index into the trip array, delete the trip at that index
+    func deleteTripAtIndex(index: Int)
+    {
+        // remove from the array of trips
+        let trip = trips.removeAtIndex(index)
+        
+        // remove the data from the trip?
+        trip.deleteTrip()
+    }
+    
+    func addTrip(newTrip: Trip)
+    {
+        trips.append(newTrip)
     }
 }

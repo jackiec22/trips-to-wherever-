@@ -12,7 +12,7 @@ import UIKit
 
 class MyTripsBrain {
     
-    var list: [Year]
+    var list: [Year] = []
     
     init()
     {
@@ -20,11 +20,32 @@ class MyTripsBrain {
         let year = Year(date: NSDate())
         list = [year]
         
+        // makeNewTripButton()
+    }
+    
+    func makeNewTripButton()
+    {
         // Make a dummy trip
-        let newTrip = Trip()
-        newTrip.name = "New Trip"
+        let newTrip = Trip(newName: "New Trip",start: NSDate())  // Start date of today
         newTrip.defaultImage = UIImage(named: "SquareCirclePlus")
-        year.trips = [newTrip]
+        
+        self.addTrip(newTrip)
+    }
+    
+    func addTrip(newTrip: Trip)
+    {
+        let currentYear = list.first // this needs to be changed *********
+        currentYear!.addTrip(newTrip)
+    }
+    
+    func deleteTripsAtIndexPaths(indexPaths: [NSIndexPath])
+    {
+        for index in indexPaths {
+            
+            let year = list[index.section]
+            year.deleteTripAtIndex(index.row)
+            
+        }
     }
     
 /*    func makeNewTripRequestImage() -> UIImage

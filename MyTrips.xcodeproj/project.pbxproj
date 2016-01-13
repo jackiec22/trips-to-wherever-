@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DC0FF9A1C407E9D00E6F4AE /* TripSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0FF991C407E9D00E6F4AE /* TripSettingsViewController.swift */; };
+		8DC0FF9C1C4080A800E6F4AE /* SettingsBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC0FF9B1C4080A800E6F4AE /* SettingsBrain.swift */; };
 		8DEA28A41C3D9BE8006C89C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA28A31C3D9BE8006C89C7 /* AppDelegate.swift */; };
 		8DEA28A91C3D9BE8006C89C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEA28A71C3D9BE8006C89C7 /* Main.storyboard */; };
 		8DEA28AB1C3D9BE8006C89C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEA28AA1C3D9BE8006C89C7 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DC0FF991C407E9D00E6F4AE /* TripSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSettingsViewController.swift; sourceTree = "<group>"; };
+		8DC0FF9B1C4080A800E6F4AE /* SettingsBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBrain.swift; sourceTree = "<group>"; };
 		8DEA28A01C3D9BE8006C89C7 /* MyTrips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEA28A31C3D9BE8006C89C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEA28A81C3D9BE8006C89C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		8DEA28D11C3D9C48006C89C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8DC0FF9B1C4080A800E6F4AE /* SettingsBrain.swift */,
 				8DEA28DD1C3E1246006C89C7 /* Year.swift */,
 				8DEA28D91C3DC9FA006C89C7 /* Trip.swift */,
 				8DEA28DB1C3DD637006C89C7 /* MyTripsBrain.swift */,
@@ -149,6 +154,7 @@
 		8DEA28D21C3D9C52006C89C7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8DC0FF991C407E9D00E6F4AE /* TripSettingsViewController.swift */,
 				8DEA28E11C3ED1C7006C89C7 /* TripDetailViewController.swift */,
 				8DEA28D51C3D9D24006C89C7 /* MyTripsCollectionViewController.swift */,
 			);
@@ -307,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DEA28DA1C3DC9FA006C89C7 /* Trip.swift in Sources */,
+				8DC0FF9C1C4080A800E6F4AE /* SettingsBrain.swift in Sources */,
 				8DEA28A41C3D9BE8006C89C7 /* AppDelegate.swift in Sources */,
 				8DEA28E21C3ED1C7006C89C7 /* TripDetailViewController.swift in Sources */,
 				8DEA28D61C3D9D24006C89C7 /* MyTripsCollectionViewController.swift in Sources */,
+				8DC0FF9A1C407E9D00E6F4AE /* TripSettingsViewController.swift in Sources */,
 				8DEA28DC1C3DD637006C89C7 /* MyTripsBrain.swift in Sources */,
 				8DEA28DE1C3E1246006C89C7 /* Year.swift in Sources */,
 				8DEA28E01C3E24D0006C89C7 /* YearHeaderView.swift in Sources */,
@@ -540,6 +548,7 @@
 				8DEA28CA1C3D9BE8006C89C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DEA28CB1C3D9BE8006C89C7 /* Build configuration list for PBXNativeTarget "MyTripsTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +557,7 @@
 				8DEA28CD1C3D9BE8006C89C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DEA28CE1C3D9BE8006C89C7 /* Build configuration list for PBXNativeTarget "MyTripsUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +566,7 @@
 				8DEA28D01C3D9BE8006C89C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
